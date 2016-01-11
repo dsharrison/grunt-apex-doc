@@ -1,0 +1,45 @@
+{
+  "name": "grunt-apex-doc",
+  "description": "A grunt wrapper for the node.js implementation of Apex Doc.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/derrek/grunt-apex-doc",
+  "author": {
+    "name": "Derrek Harrison",
+    "email": "derrek.s.harrison@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/derrek/grunt-apex-doc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/derrek/grunt-apex-doc/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/derrek/grunt-apex-doc/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-execute": "^0.2.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "apex-doc-node": "0.0.7"
+  }
+}
