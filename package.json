@@ -1,7 +1,7 @@
 {
   "name": "grunt-apex-doc",
   "description": "A grunt wrapper for the node.js implementation of Apex Doc.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/derrek/grunt-apex-doc",
   "author": {
     "name": "Derrek Harrison",
@@ -40,6 +40,6 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "apex-doc-node": "0.0.8"
+    "apex-doc-node": "0.0.9"
   }
 }
