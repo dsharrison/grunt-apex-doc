@@ -1,4 +1,4 @@
-# grunt-apex-doc
+# grunt-apex-doc [![Build Status](https://travis-ci.org/dsharrison/grunt-apex-doc.svg?branch=master)](https://travis-ci.org/dsharrison/grunt-apex-doc)
 
 > A grunt wrapper for the node.js implementation of Apex Doc.
 
