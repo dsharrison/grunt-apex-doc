@@ -33,11 +33,13 @@
     "grunt-contrib-nodeunit": "^0.3.3",
     "grunt-execute": "^0.2.2"
   },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
   "keywords": [
     "gruntplugin"
   ],
   "dependencies": {
-    "apex-doc-node": "0.0.10",
-    "grunt": "~0.4.5"
+    "apex-doc-node": "0.0.10"
   }
 }
