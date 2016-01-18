@@ -40,6 +40,6 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "apex-doc-node": "0.0.10"
+    "apex-doc-node": "0.0.11"
   }
 }
