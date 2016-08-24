@@ -7,59 +7,57 @@
  */
 
 'use strict';
+module.exports = grunt => {
 
-module.exports = function(grunt) {
+  // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
+  require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({
-    jshint: {
-      all: [
-        'Gruntfile.js',
-        'tasks/*.js',
-        '<%= nodeunit.tests %>'
-      ],
-      options: {
-        jshintrc: '.jshintrc'
-      }
-    },
-
-    // Before generating any new files, remove any previously-created files.
-    clean: {
-      tests: ['tmp']
-    },
 
     // Configuration to be run (and then tested).
-    apex_doc: {
+    apexdoc: {
       development: {
         config: {
           source: './node_modules/apex-doc-node/_test/data/',
           target: './node_modules/apex-doc-node/docs/',
           scopes: ['global', 'public'],
-          json: true
+          json: true,
+          html: false
         }
       }
     },
-
-    // Unit tests.
-    nodeunit: {
-      tests: ['test/*_test.js']
+    jsbeautifier: {
+      files: ["*.js", "tasks/**/*.js"],
+      options: {
+        js: {
+          braceStyle: "end-expand",
+          breakChainedMethods: false,
+          e4x: false,
+          evalCode: false,
+          indentChar: " ",
+          indentLevel: 0,
+          indentSize: 2,
+          indentWithTabs: false,
+          jslintHappy: false,
+          keepArrayIndentation: false,
+          keepFunctionIndentation: false,
+          maxPreserveNewlines: 10,
+          preserveNewlines: true,
+          spaceBeforeConditional: false,
+          spaceInParen: false,
+          unescapeStrings: false,
+          wrapLineLength: 0,
+          endWithNewline: true
+        }
+      }
     }
-
   });
 
   // Actually load this plugin's task(s).
   grunt.loadTasks('tasks');
 
-  // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
-
-  // Whenever the "test" task is run, first clean the "tmp" dir, then run this
-  // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'apex_doc', 'nodeunit']);
-
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'test']);
+  grunt.registerTask('default', ['jsbeautifier']);
 
 };
