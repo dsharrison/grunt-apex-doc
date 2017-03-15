@@ -27,8 +27,15 @@ module.exports = grunt => {
         }
       }
     },
+    jshint: {
+      files: ['gruntfile.js', 'tasks/*js'],
+      options: {
+        esversion: 6,
+        node: true
+      }
+    },
     jsbeautifier: {
-      files: ["*.js", "tasks/**/*.js"],
+      files: ['gruntfile.js', 'tasks/*.js'],
       options: {
         js: {
           braceStyle: "end-expand",
@@ -58,6 +65,7 @@ module.exports = grunt => {
   grunt.loadTasks('tasks');
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['jsbeautifier']);
+  grunt.registerTask('default', ['jshint', 'jsbeautifier']);
+  grunt.registerTask('test', ['jshint']);
 
 };
