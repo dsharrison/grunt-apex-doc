@@ -19,14 +19,14 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-apex-doc');
 ```
 
-## The "apex_doc" task
+## The "apexdoc" task
 
 ### Overview
-In your project's Gruntfile, add a section named `apex_doc` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `apexdoc` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  apex_doc: {
+  apexdoc: {
     config: {
       // Specify config options here to override the config.json file from
       // apex-doc-node
@@ -34,8 +34,6 @@ grunt.initConfig({
   },
 });
 ```
-
-### Config
 
 
 ## Contributing
